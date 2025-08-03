@@ -1,0 +1,70 @@
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/variables" as *;
+
+.chat-input {
+  &__action-btn {
+    padding: $spacing-sm;
+    background: transparent;
+    border: none;
+    color: $color-text-muted;
+    cursor: pointer;
+    border-radius: $border-radius-sm;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+
+    &--send {
+      background-color: $color-button-primary;
+      color: $color-button-primary-text;
+
+      &:hover {
+        background-color: $color-text-secondary;
+      }
+    }
+  }
+}
+
+.sidebar {
+  &__new-chat-btn,
+  &__nav-item,
+  &__settings-btn {
+    @include button-base;
+    width: 100%;
+    color: $color-text-primary;
+  }
+
+  &__new-chat-btn {
+    background-color: $color-tertiary;
+
+    &:hover {
+      background-color: $color-accent;
+    }
+  }
+
+  &__settings-btn {
+    background-color: transparent;
+    margin-bottom: $spacing-md;
+
+    &:hover {
+      background-color: $color-tertiary;
+    }
+
+    &--active {
+      background-color: $color-tertiary;
+    }
+  }
+
+  &__nav-item {
+    background-color: transparent;
+
+    &:hover {
+      background-color: $color-tertiary;
+    }
+
+    &--active {
+      background-color: $color-tertiary;
+    }
+  }
+}
